@@ -49,7 +49,7 @@ asyncio.run(authenticate())
 async def make_database():
     tweet_database = {}
     #get 100 tweets for each year, add +1 to the year
-    for i in range(24, 25):
+    for i in range(25, 26):
         year = str(2000 + i)
         query = "\"bro\" until:" + year + "-12-31 since:"+ year + "-01-01"
         tweets = await grab_tweets(query, MIN_TWEETS, year)
